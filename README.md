@@ -1,8 +1,10 @@
-# List Comprehensions
+# Movie SQL Search
 
 ## Description
 
-Implement various List and Dictionary Comprehensions from a CSV file
+This assignment is intended to get more familiar with reading from a sql
+database.  You will take the included sql and load the database.  Then 
+complete the normal mode objectives
 
 ## Objectives
 
@@ -10,63 +12,48 @@ Implement various List and Dictionary Comprehensions from a CSV file
 
 After completing this assignment, you should understand:
 
-* List Comprehensions
-* Dictionary Comprehensions
-* Nested Comprehensions
-
-### Performance Objectives
-
-After completing this assignment, you should be able to:
-
-* Open and read CSV files
-* Create a List Comprehension
-* Create a Dictionary Comprehension
-* Convert a string type to a datetime type
+* SQL Select Statements
+* Inner Joins
+* Left Joins
+* Many to Many Relationships
 
 ## Details
 
 ### Deliverables
 
-* A GitHub repo called list-comprehensions containing at least:
-  * `README.md` file explaining how to run your project
-  * a module called `list_comprehensions`
-  * tests for `list_comprehensions`
+* A Git repo fork of movie-sql
+* A .sql (text) file with each of the required queries 
 
 ### Requirements  
 
-* Passing unit tests
-* No PEP8 or Pyflakes warnings or errors
+* Need to work on provided database
 
 ## Normal Mode
 
-Implement these List and Dictionary Comprehensions:
+Complete the following query objectives:
 
-  * Remove all vowels from this sentence `List Comprehensions are the Greatest!`
-  * Create a list of Water Temps for each day from `buoy.csv`
-  * Convert the Water Temps from a string to a float
-  * Convert the Water Temps from Celsius to Fahrenheit rounded to an int
-  * Create a dictionary with Date as the key and Wave Height as the value
-  * Convert each Date to its numerical day of the week,
-    then create a list of values for each day of the week
-  * Create a dictionary with the average wave height for each day
+* Select all columns and rows from the movies table
+* Select only the title and id of the first 10 rows
+* Find the movie with the id of 485
+* Find the id (only that column) of the movie Made in America (1993)
+* Find the first 10 sorted alphabetically
+* Find all movies from 2002
+* Find out what year the Godfather came out
+* Without using joins find the comedies
+* Find all comedies in the year 2000
+* Find any movies that are about death and are a comedy
+* Find any movies from either 2001 or 2002 with a title containing super
 
-  * Still need a nested comprehension
+### With Joins
+* Find all the ratings for the movie Godfather show just the title and the rating
+* Order the previous objective by newest to oldest
+* Find the comedies from 2005 and get the title and imdbid from the links table
+* Find all movies that have no ratings
+* Find all fantasy movies using the many to many join between movies and genres through movie_genre table.
 
 ## Hard Mode
-
-In addition to the requirements from **Normal Mode**:
-
-1. No Idea right now what the Hard Mode will be but probably 1 or more
-  of the things above
-
-## Notes
-
-In order to change the Date to its numerical day of the week, you will need
-to use `defaultdict` with the `datetime` and `calendar` modules. This will need
-to be done as a function, not a Comprehension
-
-## Additional Resources
-
-* [List Comprehension documentation](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
-* [How to Use List Comprehensions by Example](http://howchoo.com/g/ngi2zddjzdf/how-to-use-list-comprehension-in-python)
-# movie-sql
+* Use concat and research about internet movie database to produce a valid url from the imdbid
+* Use concat and research about the movie database to produce a valid url from tmdbid
+* Get the ratings for The Unusuals and convert the timestamp into a human readable date time
+* Using SQL normalize the tags in the tags table.  Make them lowercased and replace the spaces with -
+* The movie_genre table was produced by a sql query that could match a movie to the appropriate rows in genre without the use of the join table.  Reproduce that query.
