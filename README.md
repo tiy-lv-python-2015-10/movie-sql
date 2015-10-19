@@ -2,7 +2,7 @@
 
 ## Description
 
-This assignment is intended to get more familiar with reading from a sql
+This assignment is intended to get you more familiar with reading from a sql
 database.  You will take the included sql and load the database.  Then 
 complete the normal mode objectives
 
@@ -39,13 +39,13 @@ Complete the following query objectives:
 * Find the first 10 sorted alphabetically
 * Find all movies from 2002
 * Find out what year the Godfather came out
-* Without using joins find the comedies
+* Without using joins find all the comedies
 * Find all comedies in the year 2000
 * Find any movies that are about death and are a comedy
 * Find any movies from either 2001 or 2002 with a title containing super
 
 ### With Joins
-* Find all the ratings for the movie Godfather show just the title and the rating
+* Find all the ratings for the movie Godfather, show just the title and the rating
 * Order the previous objective by newest to oldest
 * Find the comedies from 2005 and get the title and imdbid from the links table
 * Find all movies that have no ratings
